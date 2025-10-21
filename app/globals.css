@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #FFFFFF;
+  --fg: #0F172A;
+  --muted: #334155;
+}
+
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-slate-900 font-body; }
+
+.container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+.lead { @apply text-lg text-slate-700; }
+.btn { @apply inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold transition; }
+.btn-primary { @apply bg-azure text-white shadow-card hover:shadow-cardHover; }
+.btn-outline { @apply border border-azure text-azure hover:bg-slate50; }
+.badge { @apply inline-flex items-center gap-2 rounded-sm border px-2 py-1 text-sm text-slate-700; }
+.card { @apply rounded-md shadow-card bg-white; }
+.h1 { @apply text-4xl sm:text-5xl font-extrabold font-heading; }
+.h2 { @apply text-3xl font-bold font-heading; }
+.h3 { @apply text-2xl font-semibold font-heading; }
+.small { @apply text-sm text-slate-600; }
+
+/* Accessibility helpers */
+:focus-visible { outline: 2px solid #93C5FD; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
